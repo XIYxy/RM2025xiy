@@ -10,7 +10,8 @@ sp::Buzzer buzzer(&htim4, TIM_CHANNEL_3, 84e6);
 extern "C" void buzzer_task()
 {
   // C大调音阶频率表 (Hz)
-  int notes[] = {330, 294, 262, 294, 330, 349, 330, 294};
+  // int notes[] = {330, 294, 262, 294, 330, 349, 330, 294};
+  int notes[] = {294, 294};
   int length = sizeof(notes) / sizeof(notes[0]);
 
   for (int i = 0; i < length; i++) {
