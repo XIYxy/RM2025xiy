@@ -182,17 +182,17 @@ extern "C" void control_task(void * argument)
         break;
     }
 
-    // // 写入 CAN 数据
-    // motor_lf.write(can2.tx_data);
-    // motor_lr.write(can2.tx_data);
-    // motor_rf.write(can2.tx_data);
-    // motor_rr.write(can2.tx_data);
+    // 写入 CAN 数据
+    motor_lf.write(can2.tx_data);
+    motor_lr.write(can2.tx_data);
+    motor_rf.write(can2.tx_data);
+    motor_rr.write(can2.tx_data);
 
-    // // 发送 CAN 数据
-    // can2.send(motor_lf.tx_id);
-    // can2.send(motor_lr.tx_id);
-    // can2.send(motor_rf.tx_id);
-    // can2.send(motor_rr.tx_id);
+    // 发送 CAN 数据
+    can2.send(motor_lf.tx_id);
+    can2.send(motor_lr.tx_id);
+    can2.send(motor_rf.tx_id);
+    can2.send(motor_rr.tx_id);
 
     osDelay(10);  // 100 Hz 控制循环
   }
